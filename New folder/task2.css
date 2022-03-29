@@ -1,0 +1,350 @@
+/*.general styles..........................................*/
+*{
+    margin:0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+body {
+    perspective: 600px;
+    height: 2950px;
+    font-family: "pt-sans",sans-serif;
+}
+.contain{
+    width:80%;
+    margin:60px auto;
+}
+/*.common.............................................................*/
+ul{
+    list-style-type: none;
+}
+a{
+    text-decoration: none;
+    color: #7b5244;
+}
+li{
+    display: inline-block;
+    padding:14px;
+}
+ ul,.heading {
+    text-align: center;
+}
+.chairs p ,.sprites p{
+    color: rgb(160, 158, 158);
+}
+.contain ,.nav-first
+,.list1  li ,.chairs figure{
+    position: relative;
+}
+table ,.logo  ,.login ,
+.list1  li::before, .list1  li::after ,
+.chairs figure i, .design i ,.products figure 
+,.img-overlay ,.img-overlay ul{
+    position: absolute;
+}
+.nav-last ,.heading:after,
+.list2 .last-child{
+    display:block;
+}
+.chairs .contain ,.design .contain,
+.sprites ul ,.products .contain{
+    display: flex;
+}
+/* header.................................................... */
+.nav-last{
+    margin:auto  450px;
+}
+.nav-first{
+    transition:all .5s;
+ }
+table{
+    top:50px;
+    left: 0;
+    width: 400px;
+    border:2px solid #7B5244;
+    background-color: #fff;
+    opacity: 0;
+    border-spacing: 10px;
+    font-weight:normal;
+    text-align:justify;
+    visibility: hidden;
+}
+ th a{
+    border-bottom:1px  dotted  #7B5244;
+}
+table th{
+   padding-bottom: 8px;
+}
+.nav-first:hover table{
+    opacity: 1;
+    visibility: visible;
+    transition: all .5s;
+}
+.header li{
+    font-weight: bold;
+}
+.logo{
+    left: 0;
+    top:25px;
+}
+.login{
+    right: 0;
+    top: 0;
+}
+.list2 span{
+    background-color: #7B5244;
+    color: #fff;
+    border-radius:50%;
+    font-size:18px;
+}
+.list2 i{
+    font-size:1.7em;
+}
+.list1  li::before, .list1  li::after{
+    content:"";
+    border-style: solid; 
+    border-color: transparent;
+    left: 0;
+    top:0; 
+    transition: transform 0.2s;
+}
+.list1  li::before{
+    border-width: 0 2px;
+    height: 100%; 
+    width: 95%;
+    transform: scale3d(1,0,1);
+}
+.list1  li:hover:before{
+    border-color: #7B5244;
+    transform: scale3d(1,1,1);
+}
+.list1  li::after{
+    border-width: 2px 0;
+    height: 91%; 
+    width: 98%;
+    transform: scale3d(0,1,1);
+    transform-origin: left;
+}
+.list1  li:hover:after{
+    border-color: #7B5244;
+    transform: scale3d(1,1,1);
+    transition-delay: .2s;
+} 
+/*slider...................................................*/
+.slider .contain {
+    height:450px;
+    background-image: url("images2/chair.jpg");
+    background-size: cover;
+    z-index: -1;
+  }
+  /*.chairs..............................................*/
+.chairs .contain{
+    justify-content: space-around;
+}
+figure img{
+    width:95%;
+    justify-content: space-around;
+}
+ .chairs figure i{
+    width: 30px;
+    height: 30px;
+    bottom: 0;
+    right:12px;
+    background-color: brown;
+    color: #fff;
+    text-align: center;
+    visibility: hidden;
+    opacity: 0;
+}
+.chairs figure:hover i{
+    visibility: visible;
+    opacity: 1;
+}
+.chairs figure:hover {
+    -webkit-box-shadow:40px 40px 60px outset;
+    box-shadow:40px 40px 60px outset;
+}
+.heading{
+    font-size:30px;
+}
+ .heading:after{
+    content: "";
+    width:100px;
+    margin:7px auto 70px;
+    height: 2px;
+    background-color: #7B5244;
+    transition: width 1s;
+}
+.heading:hover:after{
+    width:150px;
+}
+.chairs figcaption{
+    margin-top: 20px;
+}
+/*.design...............................................*/
+.design .contain{
+    justify-content: space-around ;
+    height: 300px;
+}
+.design i{
+    left:28px;
+    top: 15px;
+    font-size: 50px;
+    color: #7B5244;
+}
+.top{
+    margin-top:20px;
+    margin-bottom: 20px;
+    margin-left:55px;
+    line-height: 25px;}
+.marketing{
+    width:50%;
+    padding-left:20px;
+    line-height:32px;
+    background-color: #f7f3ef;
+}
+.discount1 ,.discount2{
+    background-size: cover;
+    width:23%;
+    transition:all .5s ease-in-out;
+}
+.discount1{
+    background-image: url("images2/discount1.jpeg");
+}
+.discount2{
+    background-image: url("images2/discount2.jpeg");
+}
+.dashes{
+    text-align: right;
+    margin-right: 8px;
+}
+.discount1 p,.discount2 p{
+    color: rgb(180, 134, 101);
+}
+.discount1:hover, .discount2:hover{
+transform: scale(1.1);
+}
+.dashes span{
+    display: inline-block;
+    width: 50px;
+    height: 2px;
+    background: #7B5244;
+    margin-left:8px;
+}
+/* sprites................................................................. */
+ .sprites{
+    height:250px;
+ }
+ .sprites .contain{
+    padding-bottom:40px;
+    border-bottom: 1px solid black;
+ }
+.sprites ul{
+    justify-content: space-around;
+}
+.sprites ul li{
+    border-right: 1px solid  #7B5244;
+}
+.sprites ul li:last-child{
+    border: 0;
+}
+.sprites ul li .sprite1  ,.sprites ul li .sprite2,
+.sprites ul   li .sprite3,.sprites ul li .sprite4,
+.sprites ul  li .sprite5
+{
+    height:87px;
+    margin:0 30%;
+    padding-top: 2px;
+    background: url("images2/sprite-icon.png")   no-repeat
+}
+.sprites ul li .sprite1{
+    background-position:40%  0px ;
+    transition:all .5s ;
+}
+.sprites ul li .sprite2{
+    background-position:40%  -186px ;
+    transition:all .5s ;
+}
+.sprites ul  li .sprite3{
+    background-position: 40%   -370px;
+    transition:all .5s ;
+}
+.sprites ul  li .sprite4{
+    background-position:  40%  -555px;
+    transition:all .5s ;
+}
+.sprites ul  li .sprite5{
+    background-position:  40%  -742px;
+    transition:all .5s ;
+}
+ .sprites ul li:hover .sprite1{
+    background-position:40%  -92px ;
+}
+.sprites ul li:hover .sprite2{
+    background-position:40%  -278px ;
+}
+.sprites ul li:hover .sprite3{
+    background-position:40%  -462px ;
+}
+.sprites ul li:hover .sprite4{
+    background-position:40%  -647px ;
+}
+.sprites ul li:hover .sprite5{
+    background-position:40%  -834px ;
+}
+/*.products....................................................................*/
+.products{
+    height: 700px;
+}
+.products .nav2 li{
+    font-weight: normal;
+}
+.products ul{
+    margin-top:5px;
+}
+.img-contain{
+    width:30%;
+    position:relative;
+    height:450px;
+    transform-style: preserve-3d;
+}
+.img-contain:hover{
+    transform:rotateY(180deg);
+    transition:rotateY  1.5s ease-in-out ;
+}
+ .products figure{
+    height: 120%;
+    z-index: 2;
+}
+.img-overlay{
+    height:100%;
+    z-index: 1;
+   transform: rotateY(180deg);
+}
+.products figure ,.img-overlay{
+    top: 0;
+    left: 0;
+    width: 100%;
+    backface-visibility: hidden;
+}
+.img-overlay ul{
+    top:50% ;
+    transform: translateY(-50%);
+}
+.img-overlay ul i{
+    width:40px;
+    height:30px;
+    font-size:30px;
+    color: white;
+    background-color: #7b5244;
+}
+.img1{
+    width:100%;
+}
+.products .contain{
+    justify-content: space-around;
+}
+.products figcaption i ,.img-overlay>i{
+    font-size:20px;
+    color: yellow;
+}
